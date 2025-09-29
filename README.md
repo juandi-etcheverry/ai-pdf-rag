@@ -30,9 +30,10 @@ python app.py --doc ruta/al/archivo.txt --query "¿Cuál es el objetivo principa
 Flags:
 - `--no-cache`: fuerza recalcular embeddings
 - `--show-paragraph`: imprime el párrafo elegido
+- `--top-k`: Determina cuantos de los parrafos encontrados son utilizados
 
 Variables de entorno (vía `.env`):
-- `EMBEDDING_MODEL`: por defecto `intfloat/multilingual-e5-small`
+- `OPENROUTER_API_KEY`
 
 Notas:
 - La primera ejecución descargará el modelo (~80MB). Funciona en CPU.
@@ -40,4 +41,4 @@ Notas:
 ## Notas
 
 - El caché se guarda en `.cache/embeddings_*.json` y se invalida si cambian el texto, el modelo o el número de párrafos.
-- El documento debe ser texto plano. Para PDFs, convierte a texto previamente (p.ej., `pdftotext`).
+- El documento debe ser texto plano. 
